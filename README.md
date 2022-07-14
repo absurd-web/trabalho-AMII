@@ -1,1 +1,2 @@
-# trabalho-AMII
+# app-example
+Aplicação Node de Exemplo

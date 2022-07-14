@@ -1,0 +1,32 @@
+{
+  "name": "app-example",
+  "version": "0.1.0",
+  "description": "My first application in Nodejs",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wwagner33/app-example.git"
+  },
+  "keywords": [
+    "web"
+  ],
+  "author": "Wellington Wagner F. Sarmento",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/wwagner33/app-example/issues"
+  },
+  "homepage": "https://github.com/wwagner33/app-example#readme",
+  "devDependencies": {
+    "faker": "^5.5.3",
+    "nodemon": "^1.3.3"
+  },
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-ejs-layouts": "^2.5.1"
+  }
+}
