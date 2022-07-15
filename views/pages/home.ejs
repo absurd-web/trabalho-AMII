@@ -1,6 +1,11 @@
 <%- contentFor('body') %>
-
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<div class="input-group mb-3">
+    <input id="pesquisar" type="search" name="q" class="form-control" placeholder="Pesquisar" aria-label="Recipient's username" aria-describedby="basic-addon2">
+    <div class="input-group-append">
+      <button id="pesquisarButton" class="btn btn-outline-secondary" type="button">Pesquisar</button>
+    </div>
+</div>  
+<div id="carouselExampleIndicators" class="carousel slide" data-interval="false" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -22,3 +27,20 @@
       <span class="sr-only">Next</span>
     </a>
 </div>
+<script>
+    let btn = document.getElementById("pesquisarButton");
+    let textoNode = document.querySelector(".carousel-item.active>p");
+    let texto = textoNode.innerHTML;
+    //Usei o recurso de Expressão Regular que é muito bacana para buscas em strings longas. Vale conhecer!
+    btn.addEventListener("click", () => {
+        let palavra = document.getElementById("pesquisar").value;
+        let index = texto.indexOf(palavra);
+        if (index >= 0) {
+            let result = texto.replace(
+            new RegExp(palavra + "(?!([^<]+)?<)", "gi"),
+            '<b style="background-color:#ff0;">$&</b>'
+            );
+            textoNode.innerHTML = result;
+        }
+    });
+</script>
