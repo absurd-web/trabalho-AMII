@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-
+const fs = require("fs");
 const faker = require("faker");
 
 //Importe cada uma das funcoes presentes no arquivo de modulo users.js
@@ -21,17 +21,27 @@ for (let cont=0;cont<10;cont++){
 }
 
 
-router.use(express.static('public')); //Você usa o USE() para inserir um middleware no Express
-
+router.use(express.static('views')); //Você usa o USE() para inserir um middleware no Express
+function readText(fileName,res) {
+      fs.readFile(fileName, function (error, contentFile) {
+        if (error) {
+          res.send(error);
+          res.end();
+        } else {
+          data = contentFile.toString('utf8');  
+          data = data.split('#');
+          res.render("pages/home",{textos: data});
+        }
+      });
+}
 router.get('/',(req,res)=>{
+    let file = "recursos/textos.csv";
+    readText(file,res);
     //REQUEST (REQ) - O que vem do forntend para o backend
     //RESPONSE (RES) - O que vai do backend para o Forntend
    
     //Criacao de minha primeira pagina dinamica
     //res.send(html);
-    res.render("pages/home");
-
-
 }); // ()={} sendo utilizada como callback
 
 router.get('/about',(req,res)=>{
