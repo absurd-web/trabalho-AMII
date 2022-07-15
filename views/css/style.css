@@ -5,11 +5,11 @@ body {
 }
 
 header {
-    background-color: blue;
+    background-color: #2B19D4;
 }
 
 footer {
-    background-color: blue;
+    background-color: #2B19D4;
 }
 
 main {
@@ -26,10 +26,25 @@ main {
 
 .jumbotron {
     background-color: white;
+    margin-top: 30px;
+}
+
+.col-sm-4 p {
+    color: #2B19D4;
+}
+
+::selection{
+    background-color: #2B19D4;
+    color: white;
+  }
+
+h1 {
+    margin-bottom: 10px;
 }
 
 .row img {
     max-width: 150px;
+    max-height: 150px;
 }
 
 .carousel-indicators {
