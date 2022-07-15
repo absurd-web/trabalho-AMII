@@ -47,18 +47,18 @@ router.get('/',(req,res)=>{
 router.get('/about',(req,res)=>{
     let devTeam = [
     {
-        name: "Wellington Wagner F. Sarmento",
-        email:"meu@email.edu",
+        name: "Israel Gomes Carneiro Filho",
+        email:"2018infor18@gmail.com",
         avatar:"http://placebear.com/300/300"
     },
     {
-        name: "Patrícia de Sousa Paula",
-        email:"dela@email.edu",
+        name: "Pedro Davi Vasconcelos Oliveira",
+        email:"pd350854@gmail.com",
         avatar:"http://placebear.com/400/300"
     },
     {
-        name: "Matheus de sous aPaula Sarmento",
-        email:"dele@email.edu",
+        name: "Vitor Martins de Oliveira",
+        email:"vitor-oliveira@outlook.com",
         avatar:"http://placebear.com/500/300"
     }
     ];

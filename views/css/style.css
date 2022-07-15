@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&display=swap');
+
+body {
+    background-color: black;
+}
+
+header {
+    background-color: blue;
+}
+
+footer {
+    background-color: blue;
+}
+
+main {
+    font-family: 'Barlow Condensed', sans-serif;
+    color: grey;
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.row {
+    background-color: white;
+}
+
+.jumbotron {
+    background-color: white;
+}
+
+.row img {
+    max-width: 150px;
+}
+
+.carousel-indicators {
+    position: relative;
+}
