@@ -46,7 +46,7 @@ ABC ->      -> CBA
 
 
 
-    app.use(express.static('public'));
+    app.use(express.static('views'));
     
 
     app.set('view engine','ejs');
